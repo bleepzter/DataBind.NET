@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 
-namespace DataBind.Specialized {
+namespace DataBind.Bcl.Specialized {
 
 	/// <summary>
 	/// Represents a task that could be binded to 

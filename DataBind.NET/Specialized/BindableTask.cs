@@ -1,8 +1,7 @@
-﻿using System;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 // ReSharper disable ArrangeAccessorOwnerBody
 
-namespace DataBind.Specialized {
+namespace DataBind.Bcl.Specialized {
 
 	/// <summary>
 	/// A task that could be binded to 

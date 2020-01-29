@@ -38,7 +38,7 @@ It provides a basic implementation of the `INotifyPropertyChanged` event used to
  
  For the purpose - a `BindableTask` or `BindableTask<T>` expose the following properties, for each of which
  the `INotifiedPropertyChanged` event is reaised whenever the underlying task has completed depending on
- how the task has actually completed.
+ how the task has actually completed:
 
 * Status
 * IsCompleted

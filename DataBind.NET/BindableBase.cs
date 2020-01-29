@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace DataBind {
+namespace DataBind.Bcl {
 
 	/// <summary>
 	/// A base view model class

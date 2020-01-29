@@ -1,5 +1,5 @@
 ﻿using System;
-namespace DataBind {
+namespace DataBind.Bcl {
 
 	/// <summary>
 	/// Base object implementing the Dispose pattern

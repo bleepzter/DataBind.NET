@@ -1,14 +1,12 @@
-<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.0</TargetFramework>
     <UseWPF>true</UseWPF>
-    <RootNamespace>DataBind</RootNamespace>
+    <RootNamespace>DataBind.Bcl</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Converters\" />
-    <Folder Include="Commands\" />
     <Folder Include="Navigation\" />
     <Folder Include="Attributes\" />
     <Folder Include="Extensions\" />
