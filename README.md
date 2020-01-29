@@ -20,9 +20,12 @@ It provides a basic implementation of the `INotifyPropertyChanged` event used to
 
 	public string Name {
 		get { return this.name; }
-		set { base.SetValue(ref this.name, value); }  /* This line will set the value of 'name' and also raise the INotifyPropertyChanged event. */
+		set { base.SetValue(ref this.name, value); }  
 	}
 
  }
  ```
+
+ The line `base.SetValue(ref this.name, value)` updates the value of the private field `name` and 
+ will also raise the `INotifyPropertyChanged` event.
 
