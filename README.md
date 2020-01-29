@@ -10,7 +10,8 @@ The `BindableBase` class is the base class describing view models within the app
 It provides a basic implementation of the `INotifyPropertyChanged` event used to notify 
  subscribers (views) bound to the view model that the view model has changed. 
 
- To create your own view models, one has to simply inherit from the BindableBase as follows:
+ To create your own view models, one has to simply inherit from the BindableBase as shown
+ in the example bellow:
  
  ```csharp
 
