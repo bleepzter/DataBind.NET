@@ -8,8 +8,6 @@
 
   <ItemGroup>
     <Folder Include="Navigation\" />
-    <Folder Include="Attributes\" />
-    <Folder Include="Extensions\" />
   </ItemGroup>
 
 </Project>

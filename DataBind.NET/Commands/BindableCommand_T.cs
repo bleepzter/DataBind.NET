@@ -1,20 +1,19 @@
 ﻿using System;
-using Accessibility;
 namespace DataBind.Bcl.Commands {
 
 	/// <summary>
-	/// Represents a command.
+	/// Represents a command with a parameter.
 	/// </summary>
-	public class BindableCommand : BindableCommandBase {
+	/// <typeparam name="T"></typeparam>
+	public class BindableCommand<T>: BindableCommandBase {
 
-		private readonly Action executeAction;
-		private readonly Func<bool> canExecuteAction;
+		private readonly Action<T> executeAction;
+		private readonly Func<T, bool> canExecuteAction;
 
 		/// <summary>
 		/// Creates an instance of a command with a specific action.
 		/// </summary>
-		/// <param name="executeAction"></param>
-		public BindableCommand(Action executeAction) : this(executeAction, () => true) {
+		public BindableCommand(Action<T> executeAction) : this(executeAction, (x) => true) {
 
 		}
 
@@ -23,7 +22,7 @@ namespace DataBind.Bcl.Commands {
 		/// </summary>
 		/// <param name="executeAction"></param>
 		/// <param name="canExecuteAction"></param>
-		public BindableCommand(Action executeAction, Func<bool> canExecuteAction) {
+		public BindableCommand(Action<T> executeAction, Func<T, bool> canExecuteAction) {
 			this.executeAction = executeAction.ThrowIfNull(nameof(executeAction));
 			this.canExecuteAction = canExecuteAction.ThrowIfNull(nameof(canExecuteAction));
 		}
@@ -31,24 +30,23 @@ namespace DataBind.Bcl.Commands {
 		/// <summary>
 		/// Executes the command.
 		/// </summary>
-		public void Execute() {
-			this.executeAction();
+		public void Execute(T parameter) {
+			this.executeAction(parameter);
 		}
 
 		/// <summary>
 		/// Checks to see if the command can be executed.
 		/// </summary>
-		/// <returns></returns>
-		public bool CanExecute() {
-			return this.canExecuteAction();
+		public bool CanExecute(T parameter) {
+			return this.canExecuteAction(parameter);
 		}
 
 		protected override void ExecuteInternal(object parameter) {
-			this.Execute();
+			this.Execute((T)(parameter));
 		}
 
 		protected override bool CanExecuteInternal(object parameter) {
-			return this.CanExecute();
+			return this.CanExecute((T)(parameter));
 		}
 	}
 
