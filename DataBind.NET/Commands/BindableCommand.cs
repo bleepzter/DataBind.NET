@@ -46,13 +46,13 @@ namespace DataBind.Bcl.Commands {
 		/// <returns>
 		/// <see langword="true" /> if this command can be executed; otherwise, <see langword="false" />.</returns>
 		bool ICommand.CanExecute(object parameter) {
-			throw new NotImplementedException();
+			return this.CanExecute(parameter);
 		}
 
 		/// <summary>Defines the method to be called when the command is invoked.</summary>
 		/// <param name="parameter">Data used by the command.  If the command does not require data to be passed, this object can be set to <see langword="null" />.</param>
 		void ICommand.Execute(object parameter) {
-			throw new NotImplementedException();
+			this.Execute(parameter);
 		}
 
 		/// <summary>

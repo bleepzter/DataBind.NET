@@ -4,7 +4,7 @@ using System.ComponentModel;
 // ReSharper disable ArrangeAccessorOwnerBody
 
 
-namespace DataBind.Bcl.Specialized {
+namespace DataBind.Bcl.Threading {
 
 	public abstract class BindableTaskBase : BindableBase, IBindableTask {
 
